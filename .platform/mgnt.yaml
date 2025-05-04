@@ -1,16 +1,14 @@
 base:
   global:
     istioNamespace: istio
-    hub: docker.io/istio
-    tag: 1.25.2
+    # hub: docker.io/istio
+    # tag: 1.25.2
 
-istiod:
-  global:
-    istioNamespace: istio
-    hub: docker.io/istio
-    tag: 1.25.2
+# istiod:
+#   global:
+#     istioNamespace: istio
 
-gateway:
-  namespace: istio
-  hub: docker.io/istio
-  tag: 1.25.2
+# gateway:
+#   namespace: istio
+#   hub: docker.io/istio
+#   tag: 1.25.2
