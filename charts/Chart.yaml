@@ -2,13 +2,13 @@ apiVersion: v2
 name: demo-platform-istio
 version: 0.1.0
 description: My platform chart with Istio and Gateway
-dependencies:
-  - name: base
-    version: 1.25.2
-    repository: "https://istio-release.storage.googleapis.com/charts"
-  - name: istiod
-    version: 1.25.2
-    repository: "https://istio-release.storage.googleapis.com/charts"
-  - name: gateway
-    version: 1.25.2
-    repository: "https://istio-release.storage.googleapis.com/charts"
+dependencies: []
+  # - name: base
+  #   version: 1.25.2
+  #   repository: "https://istio-release.storage.googleapis.com/charts"
+  # - name: istiod
+  #   version: 1.25.2
+  #   repository: "https://istio-release.storage.googleapis.com/charts"
+  # - name: gateway
+  #   version: 1.25.2
+  #   repository: "https://istio-release.storage.googleapis.com/charts"
