@@ -9,6 +9,7 @@ spec:
   issuerRef:
     name: letsencrypt
     kind: ClusterIssuer
-  commonName: "*.cloudsninja.com"
+  commonName: argocd.cloudsninja.com
   dnsNames:
-    - "*.cloudsninja.com"
+    - argocd.cloudsninja.com
+
