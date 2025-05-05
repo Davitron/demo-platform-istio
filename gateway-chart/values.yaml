@@ -1,4 +1,10 @@
 gateway:
+  podAnnotations:
+    argocd.argoproj.io/sync-wave: "1"
+  serviceAnnotations:
+    argocd.argoproj.io/sync-wave: "1"
+  serviceAccountAnnotations:
+    argocd.argoproj.io/sync-wave: "1"
   service:
     annotations:
       service.beta.kubernetes.io/aws-load-balancer-type: "nlb"

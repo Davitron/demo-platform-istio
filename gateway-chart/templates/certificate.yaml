@@ -5,10 +5,10 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "2"
 spec:
-  secretName: argocd-tls
+  secretName: wildcard-cert
   issuerRef:
     name: letsencrypt
     kind: ClusterIssuer
-  commonName: argocd.thecloudsninja.com
+  commonName: "{{ .Values.commonName }}"
   dnsNames:
-    - argocd.thecloudsninja.com
+    - "{{ .Values.commonName }}"

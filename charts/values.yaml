@@ -1,10 +1,10 @@
 base:
   global:
-    istioNamespace: istio-system
+    istioNamespace: istio
+
 
 istiod:
   global:
-    istioNamespace: istio-system
-
+    istioNamespace: istio
 gateway:
   namespace: istio-system
