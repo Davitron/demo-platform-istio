@@ -1,14 +1,26 @@
+{{- $cname := list -}}
+
+{{- if kindIs "string" .Values.commonName -}}
+  {{- $cname = append $cname .Values.commonName -}}
+{{- else if kindIs "slice" .Values.commonName -}}
+  {{- $cname = .Values.commonName -}}
+{{- end -}}
+
+{{- range $name := $cname }}
+{{- $safeName := regexReplaceAll "[^a-z0-9]+" (regexReplaceAll "^\\*\\." $name "" | lower) "-" | trimSuffix "-" }}
+---
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: wildcard-cert
+  name: wildcard-cert-{{ $safeName }}
   annotations:
     argocd.argoproj.io/sync-wave: "2"
 spec:
-  secretName: wildcard-cert
+  secretName: wildcard-cert-{{ $safeName }}
   issuerRef:
     name: letsencrypt
     kind: ClusterIssuer
-  commonName: "{{ .Values.commonName }}"
+  commonName: "{{ $name }}"
   dnsNames:
-    - "{{ .Values.commonName }}"
+    - "{{ $name }}"
+{{- end }}

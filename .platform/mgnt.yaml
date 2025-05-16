@@ -1,1 +1,4 @@
-commonName: "*.thecloudsninja.com"
+commonName: 
+  - "*.thecloudsninja.com"
+  - "*.mgnt.thecloudsninja.com"
+
