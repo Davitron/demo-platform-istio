@@ -1,0 +1,17 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: {{ .Values.gatewayName }}-gateway
+spec:
+  selector:
+    istio: {{ .Values.gateway.selector }}
+  servers:
+    - hosts:
+        - {{ .Values.gateway.host | quote }}
+      port:
+        name: https
+        number: 443
+        protocol: HTTPS
+      tls:
+        credentialName: {{ .Values.gateway.tlsSecretName }}
+        mode: SIMPLE

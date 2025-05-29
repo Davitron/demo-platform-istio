@@ -2,3 +2,11 @@ commonName:
   - "*.thecloudsninja.com"
   - "*.mgnt.thecloudsninja.com"
 
+gatewayName: mgnt
+
+gateway:
+  name: mgnt-gateway
+  selector: mgnt-gateway
+  host: "*.mgnt.thecloudsninja.com"
+  tlsSecretName: wildcard-cert-mgnt-thecloudsninja-com
+
