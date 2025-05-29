@@ -1,1 +1,8 @@
 commonName: "*.dev.thecloudsninja.com"
+
+gatewayName: dev
+
+gateway:
+  selector: gateway-development
+  host: "*.dev.thecloudsninja.com"
+  tlsSecretName: wildcard-cert-dev-thecloudsninja-com

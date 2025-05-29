@@ -1,4 +1,8 @@
 gateway:
+  selector: istio-ingressgateway
+  host: my-gateway.example.com
+  tlsSecretName: my-gateway-tls
+
   podAnnotations:
     argocd.argoproj.io/sync-wave: "1"
   serviceAnnotations:
